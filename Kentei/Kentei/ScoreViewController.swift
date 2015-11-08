@@ -22,9 +22,9 @@ class ScoreViewController: UIViewController {
         
         scoreLabel.text = "正解数は \(correct) です！"
         if correct >= okScore {
-            judgeImageView.image = UIImage(named: "images/Goukaku.png")!
+            judgeImageView.image = UIImage(named: "images/goukaku_eru.png")!
         } else {
-            judgeImageView.image = UIImage(named: "images/Fugoukaku.png")!
+            judgeImageView.image = UIImage(named: "images/fugoukaku_mayaka.png")!
         }
     }
 
