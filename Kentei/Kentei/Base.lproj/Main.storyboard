@@ -53,7 +53,7 @@
                                     <constraint firstAttribute="height" constant="40" id="QeG-ph-i2c"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Start!" backgroundImage="btn_on.png"/>
+                                <state key="normal" title="気になります！" backgroundImage="btn_on.png"/>
                                 <connections>
                                     <segue destination="28G-JS-fWO" kind="presentation" id="hkt-XL-mvF"/>
                                 </connections>
@@ -283,12 +283,21 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="sWx-Fv-Yqg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ten-6q-TmS">
+                                <rect key="frame" x="165" y="362" width="45" height="45"/>
+                                <state key="normal" title="Button" image="twOff.png"/>
+                                <state key="highlighted" image="twOn.png"/>
+                                <connections>
+                                    <action selector="postTwitter:" destination="Ig6-3M-66W" eventType="touchUpInside" id="1fM-m5-7OY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Cme-9U-n59" firstAttribute="centerY" secondItem="962-xJ-yd1" secondAttribute="centerY" constant="150" id="7Lm-mb-c7t"/>
                             <constraint firstItem="xrR-5x-ELl" firstAttribute="centerX" secondItem="962-xJ-yd1" secondAttribute="centerX" id="IBE-SB-S4O"/>
                             <constraint firstItem="lE9-jz-1ZR" firstAttribute="centerY" secondItem="962-xJ-yd1" secondAttribute="centerY" constant="-65" id="IEI-kF-DCY"/>
+                            <constraint firstItem="zlR-0f-4WT" firstAttribute="leading" secondItem="962-xJ-yd1" secondAttribute="leadingMargin" constant="30" id="PAl-gU-DYb"/>
                             <constraint firstItem="CRo-NX-9im" firstAttribute="centerX" secondItem="962-xJ-yd1" secondAttribute="centerX" id="UdD-Zo-k9B"/>
                             <constraint firstItem="lE9-jz-1ZR" firstAttribute="centerX" secondItem="962-xJ-yd1" secondAttribute="centerX" id="VdO-Bt-DxV"/>
                             <constraint firstItem="CRo-NX-9im" firstAttribute="centerY" secondItem="962-xJ-yd1" secondAttribute="centerY" constant="-240" id="YGV-7y-Avh"/>
@@ -318,5 +327,7 @@
         <image name="kenteiBackOn.png" width="145" height="30"/>
         <image name="mondai_back_ground.png" width="310" height="173"/>
         <image name="scoreBG.png" width="270" height="123"/>
+        <image name="twOff.png" width="45" height="45"/>
+        <image name="twOn.png" width="45" height="45"/>
     </resources>
 </document>

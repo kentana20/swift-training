@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class ScoreViewController: UIViewController {
     
@@ -27,11 +28,17 @@ class ScoreViewController: UIViewController {
         }
     }
 
+    @IBAction func postTwitter(sender: AnyObject) {
+        let twVC: SLComposeViewController =
+            SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        twVC.setInitialText("今回の正解数は \(correct) です。")
+        self.presentViewController(twVC, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

@@ -30,6 +30,7 @@ class KenteiViewController: UIViewController {
     var mondaiCount = 0
     var correctCount = 0
     let total = 10
+    var soundManager = SEManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +62,7 @@ class KenteiViewController: UIViewController {
         // load csv data
         let viewController = ViewController()
         csvArray = viewController.loadCSV("csv/kentei")
-        
+        csvArray = quizShuffle()
         // csvで読み込んだデータを元にクイズを描画
         protQuiz()
     }
@@ -70,9 +71,11 @@ class KenteiViewController: UIViewController {
     @IBAction func btnAction(sender: UIButton) {
         if sender.tag == Int(mondaiArray[1]) {
             judgeImageView.image = UIImage(named: "images/maru.png")!
+            soundManager.sePlay("se/right.mp3")
             correctCount++
         } else {
             judgeImageView.image = UIImage(named: "images/batsu.png")!
+            soundManager.sePlay("se/mistake.mp3")
         }
         judgeImageView.hidden = false
         // 解説表示
@@ -117,6 +120,7 @@ class KenteiViewController: UIViewController {
         
     }
     
+    // 戻るボタンで次のクイズへ
     func backBtnTapped() {
         let screenHeight = Double(UIScreen.mainScreen().bounds.size.height)
         UIView.animateWithDuration(0.5, animations: {() ->
@@ -132,7 +136,23 @@ class KenteiViewController: UIViewController {
         judgeImageView.hidden = true
         nextQuiz()
     }
-    
+
+    // クイズのシャッフル
+    func quizShuffle() -> [String] {
+        var array = [String]()
+        let sortedArray = NSMutableArray(array: csvArray)
+        var arrayCount = sortedArray.count
+        while(arrayCount > 0) {
+            let randomIndex = arc4random() % UInt32(arrayCount)
+            sortedArray.exchangeObjectAtIndex((arrayCount-1),
+                withObjectAtIndex: Int(randomIndex))
+            arrayCount = arrayCount-1
+            array.append(sortedArray[arrayCount] as! String)
+        }
+        return array
+    }
+
+    // ScoreViewControllerへの正解数引き渡し
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let sVC = segue.destinationViewController as! ScoreViewController
         sVC.correct = correctCount
