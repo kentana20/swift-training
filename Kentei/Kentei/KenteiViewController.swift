@@ -30,6 +30,7 @@ class KenteiViewController: UIViewController {
     var mondaiCount = 0
     var correctCount = 0
     let total = 10
+    var soundManager = SEManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,9 +71,11 @@ class KenteiViewController: UIViewController {
     @IBAction func btnAction(sender: UIButton) {
         if sender.tag == Int(mondaiArray[1]) {
             judgeImageView.image = UIImage(named: "images/maru.png")!
+            soundManager.sePlay("se/right.mp3")
             correctCount++
         } else {
             judgeImageView.image = UIImage(named: "images/batsu.png")!
+            soundManager.sePlay("se/mistake.mp3")
         }
         judgeImageView.hidden = false
         // 解説表示

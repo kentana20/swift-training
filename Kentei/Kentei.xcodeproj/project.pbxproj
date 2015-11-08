@@ -26,6 +26,7 @@
 		D7A5B3BA1BEF8A3300A216D1 /* kenteiBackOn.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A5B3B81BEF8A3300A216D1 /* kenteiBackOn.png */; };
 		D7A5B3BD1BEFA5AC00A216D1 /* twOff.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A5B3BB1BEFA5AC00A216D1 /* twOff.png */; };
 		D7A5B3BE1BEFA5AC00A216D1 /* twOn.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A5B3BC1BEFA5AC00A216D1 /* twOn.png */; };
+		D7A5B3C21BEFA8AA00A216D1 /* SEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A5B3C11BEFA8AA00A216D1 /* SEManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		D7A5B3B81BEF8A3300A216D1 /* kenteiBackOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kenteiBackOn.png; path = images/kenteiBackOn.png; sourceTree = "<group>"; };
 		D7A5B3BB1BEFA5AC00A216D1 /* twOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twOff.png; path = images/twOff.png; sourceTree = "<group>"; };
 		D7A5B3BC1BEFA5AC00A216D1 /* twOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twOn.png; path = images/twOn.png; sourceTree = "<group>"; };
+		D7A5B3C11BEFA8AA00A216D1 /* SEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SEManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				D79E72C21BEEE78600CD8627 /* ViewController.swift */,
 				D79E72C41BEEE78600CD8627 /* Main.storyboard */,
 				D79E72D81BEEED4A00CD8627 /* KenteiViewController.swift */,
+				D7A5B3C11BEFA8AA00A216D1 /* SEManager.swift */,
 				D79E72DA1BEEED5F00CD8627 /* ScoreViewController.swift */,
 				D79E72C71BEEE78600CD8627 /* Assets.xcassets */,
 				D79E72C91BEEE78600CD8627 /* LaunchScreen.storyboard */,
@@ -195,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D79E72D91BEEED4A00CD8627 /* KenteiViewController.swift in Sources */,
+				D7A5B3C21BEFA8AA00A216D1 /* SEManager.swift in Sources */,
 				D79E72C31BEEE78600CD8627 /* ViewController.swift in Sources */,
 				D79E72C11BEEE78600CD8627 /* AppDelegate.swift in Sources */,
 				D79E72DB1BEEED5F00CD8627 /* ScoreViewController.swift in Sources */,
