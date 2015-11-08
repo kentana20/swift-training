@@ -53,7 +53,7 @@
                                     <constraint firstAttribute="height" constant="40" id="QeG-ph-i2c"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Start!" backgroundImage="btn_on.png"/>
+                                <state key="normal" title="気になります！" backgroundImage="btn_on.png"/>
                                 <connections>
                                     <segue destination="28G-JS-fWO" kind="presentation" id="hkt-XL-mvF"/>
                                 </connections>
