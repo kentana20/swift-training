@@ -61,7 +61,7 @@ class KenteiViewController: UIViewController {
         // load csv data
         let viewController = ViewController()
         csvArray = viewController.loadCSV("csv/kentei")
-        
+        csvArray = quizShuffle()
         // csvで読み込んだデータを元にクイズを描画
         protQuiz()
     }
@@ -131,6 +131,20 @@ class KenteiViewController: UIViewController {
 
         judgeImageView.hidden = true
         nextQuiz()
+    }
+    
+    func quizShuffle() -> [String] {
+        var array = [String]()
+        let sortedArray = NSMutableArray(array: csvArray)
+        var arrayCount = sortedArray.count
+        while(arrayCount > 0) {
+            let randomIndex = arc4random() % UInt32(arrayCount)
+            sortedArray.exchangeObjectAtIndex((arrayCount-1),
+                withObjectAtIndex: Int(randomIndex))
+            arrayCount = arrayCount-1
+            array.append(sortedArray[arrayCount] as! String)
+        }
+        return array
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
