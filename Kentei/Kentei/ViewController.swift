@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var creditLabel: UILabel!
     
+    var soundManager = SEManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,10 @@ class ViewController: UIViewController {
         
         return csvArray as! [String]
         
+    }
+    
+    @IBAction func startQuiz(sender: UIButton) {
+        soundManager.sePlay("se/kininaru.mp3")
     }
 
     override func didReceiveMemoryWarning() {

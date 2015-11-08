@@ -55,6 +55,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="気になります！" backgroundImage="btn_on.png"/>
                                 <connections>
+                                    <action selector="startQuiz:" destination="BYZ-38-t0r" eventType="touchDown" id="l44-hf-MvJ"/>
                                     <segue destination="28G-JS-fWO" kind="presentation" id="hkt-XL-mvF"/>
                                 </connections>
                             </button>
