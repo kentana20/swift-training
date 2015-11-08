@@ -117,6 +117,7 @@ class KenteiViewController: UIViewController {
         
     }
     
+    // 戻るボタンで次のクイズへ
     func backBtnTapped() {
         let screenHeight = Double(UIScreen.mainScreen().bounds.size.height)
         UIView.animateWithDuration(0.5, animations: {() ->
@@ -132,7 +133,8 @@ class KenteiViewController: UIViewController {
         judgeImageView.hidden = true
         nextQuiz()
     }
-    
+
+    // クイズのシャッフル
     func quizShuffle() -> [String] {
         var array = [String]()
         let sortedArray = NSMutableArray(array: csvArray)
@@ -146,7 +148,8 @@ class KenteiViewController: UIViewController {
         }
         return array
     }
-    
+
+    // ScoreViewControllerへの正解数引き渡し
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let sVC = segue.destinationViewController as! ScoreViewController
         sVC.correct = correctCount

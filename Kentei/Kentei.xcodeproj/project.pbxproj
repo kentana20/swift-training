@@ -24,6 +24,8 @@
 		D7A5B3B61BEF8A1500A216D1 /* hyoka_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A5B3B51BEF8A1500A216D1 /* hyoka_logo.png */; };
 		D7A5B3B91BEF8A3300A216D1 /* kenteiBack.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A5B3B71BEF8A3300A216D1 /* kenteiBack.png */; };
 		D7A5B3BA1BEF8A3300A216D1 /* kenteiBackOn.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A5B3B81BEF8A3300A216D1 /* kenteiBackOn.png */; };
+		D7A5B3BD1BEFA5AC00A216D1 /* twOff.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A5B3BB1BEFA5AC00A216D1 /* twOff.png */; };
+		D7A5B3BE1BEFA5AC00A216D1 /* twOn.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A5B3BC1BEFA5AC00A216D1 /* twOn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		D7A5B3B51BEF8A1500A216D1 /* hyoka_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hyoka_logo.png; path = images/hyoka_logo.png; sourceTree = "<group>"; };
 		D7A5B3B71BEF8A3300A216D1 /* kenteiBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kenteiBack.png; path = images/kenteiBack.png; sourceTree = "<group>"; };
 		D7A5B3B81BEF8A3300A216D1 /* kenteiBackOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kenteiBackOn.png; path = images/kenteiBackOn.png; sourceTree = "<group>"; };
+		D7A5B3BB1BEFA5AC00A216D1 /* twOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twOff.png; path = images/twOff.png; sourceTree = "<group>"; };
+		D7A5B3BC1BEFA5AC00A216D1 /* twOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twOn.png; path = images/twOn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				D7A5B3B51BEF8A1500A216D1 /* hyoka_logo.png */,
 				D7A5B3B71BEF8A3300A216D1 /* kenteiBack.png */,
 				D7A5B3B81BEF8A3300A216D1 /* kenteiBackOn.png */,
+				D7A5B3BB1BEFA5AC00A216D1 /* twOff.png */,
+				D7A5B3BC1BEFA5AC00A216D1 /* twOn.png */,
 				D7A5B3A91BEF031100A216D1 /* se */,
 				D7A5B3A71BEF030100A216D1 /* images */,
 				D7A5B3A51BEF02D600A216D1 /* csv */,
@@ -167,12 +173,14 @@
 				D7A5B3AA1BEF031100A216D1 /* se in Resources */,
 				D7A5B3B91BEF8A3300A216D1 /* kenteiBack.png in Resources */,
 				D7A5B3A81BEF030100A216D1 /* images in Resources */,
+				D7A5B3BD1BEFA5AC00A216D1 /* twOff.png in Resources */,
 				D79E72CB1BEEE78600CD8627 /* LaunchScreen.storyboard in Resources */,
 				D7A5B3B61BEF8A1500A216D1 /* hyoka_logo.png in Resources */,
 				D7A5B3AC1BEF03C900A216D1 /* btn_on.png in Resources */,
 				D79E72C81BEEE78600CD8627 /* Assets.xcassets in Resources */,
 				D7A5B3B21BEF2CCB00A216D1 /* maru.png in Resources */,
 				D79E72C61BEEE78600CD8627 /* Main.storyboard in Resources */,
+				D7A5B3BE1BEFA5AC00A216D1 /* twOn.png in Resources */,
 				D7A5B3BA1BEF8A3300A216D1 /* kenteiBackOn.png in Resources */,
 				D7A5B3A61BEF02D600A216D1 /* csv in Resources */,
 				D7A5B3AE1BEF232300A216D1 /* mondai_back_ground.png in Resources */,
