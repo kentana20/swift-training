@@ -9,13 +9,18 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class ViewController: UIViewController,
+        UITableViewDataSource,
+        UITableViewDelegate {
     @IBOutlet var table: UITableView!
 
     var newsDataArray = NSArray()
+    var newsUrl = ""
+    var publisher = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "News Reader"
         table.dataSource = self
         table.delegate = self
         
@@ -48,13 +53,17 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("セルのindex \(indexPath.row)")
-        
         let newsDic = newsDataArray[indexPath.row] as! NSDictionary
-        let newsUrl = newsDic["unescapedUrl"] as! String
-        let url = NSURL(string: newsUrl)
-        let app = UIApplication.sharedApplication()
-        app.openURL(url!)
+        newsUrl = newsDic["unescapedUrl"] as! String
+        publisher = newsDic["publisher"] as! String
+
+        performSegueWithIdentifier("toWebView", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let wvc = segue.destinationViewController as! WebViewController
+        wvc.newsUrl = newsUrl
+        wvc.title = publisher
     }
 
     override func didReceiveMemoryWarning() {
